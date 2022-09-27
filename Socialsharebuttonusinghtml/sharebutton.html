@@ -1,0 +1,99 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #101010;
+        color: white;
+    }
+    .box{
+        width: 150px;
+        height: 55px;
+        background: white;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box a{
+        margin: 5px;
+        color: #1c1c1c;
+    }
+    .box a:hover{
+        color: #3683ff;
+        text-shadow: 0 0 20px #3683ff9f;
+    }
+    .top{
+        position: absolute;
+        background: #000000;
+        top: -1%;
+        width: 102%;
+        height: 71%;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .4s;
+        text-shadow: 0 0 20px #3683ff9f;
+    }
+    .top p{
+        transition: all .4s;
+    }
+    .bottom{
+        position: absolute;
+        background: #000000;
+        bottom: -1%;
+        width: 102%;
+        height: 31%;
+        border-radius: 0 0 10px 10px;
+        transition: all .4s;
+    }
+    .bottom::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 60%;
+        height: 2px;
+        background: #6ab3f8;
+        transition: all .2s;
+    }
+    .box:hover .bottom::before{
+        transform: translate(-50%, 380%);
+        background: #3683ff;
+        box-shadow: 0 0 20px #3683ff9f;
+    }
+    .box:hover .top{
+        transform: translateY(-80%);
+    }
+    .box:hover .top p{
+        color: #3683ff;
+        text-shadow: 0 0 20px #3683ff;
+    }
+    .box:hover .bottom{
+        transform: translateY(38%);
+    }
+</style>
+<div class="box">
+    <div class="top">
+        <p>SHARE</p>
+    </div>
+    <div class="bottom"></div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<div>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+ </div>
